@@ -6,7 +6,7 @@ let pool = null;
 function createPool() {
   return mysql.createPool({
     host: process.env.DB_HOST || 'sql201.ezyro.com',
-    port: parseInt(process.env.DB_PORT) || 3306,
+    // port: parseInt(process.env.DB_PORT) || 3306,
     user: process.env.DB_USER || 'ezyro_41156093',
     password: process.env.DB_PASSWORD || 'Ayan@2023',
     database: process.env.DB_NAME || 'ezyro_41156093_jp_marketing',
