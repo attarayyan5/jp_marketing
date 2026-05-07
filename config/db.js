@@ -5,11 +5,11 @@ let pool = null;
 
 function createPool() {
   return mysql.createPool({
-    host: process.env.DB_HOST || 'mysql-386585e5-attarayyan91-e0e9.l.aivencloud.com',
-    port: parseInt(process.env.DB_PORT) || 20381,
-    user: process.env.DB_USER || 'avnadmin',
-    password: process.env.DB_PASSWORD || 'AVNS_MwK1okDfe4BEYSXD66r',
-    database: process.env.DB_NAME || 'defaultdb',
+    host: process.env.DB_HOST || 'turntable.proxy.rlwy.net',
+    port: parseInt(process.env.DB_PORT) || 22016,
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'QDurzdbfIlnxUJnXFIkfdDNWqJjHwhMS',
+    database: process.env.DB_NAME || 'railway',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
