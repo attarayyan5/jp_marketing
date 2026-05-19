@@ -9,8 +9,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const corsOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(',').map(s => s.trim())
+  : ['https://jpm-marketing.vercel.app', 'http://localhost:5173', 'http://localhost:3000'];
+
 app.use(cors({
-  origin: ['https://jpm-marketing.vercel.app/', 'http://localhost:3000'],
+  origin: corsOrigins,
   credentials: true
 }));
 app.use(express.json());
